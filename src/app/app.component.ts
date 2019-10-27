@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { }
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-forms';
+  title = 'Angular Forms';
+  jobs = [{title: 'Senior Blablaler', company: 'xyz Corporation'}, {title: 'Executive Gbasgboser', company: 'Ewoo Nigeria Limited'}];
+  newJob = {};
 }
