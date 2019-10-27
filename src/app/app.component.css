@@ -1,1 +1,12 @@
-@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+
+/*custom css to highlight required, and invalid form inputs*/
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}
+
+.ng-valid[required],
+ng-valid.required {
+    border-left: 5px solid green;
+}
