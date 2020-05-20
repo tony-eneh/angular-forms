@@ -15,11 +15,14 @@
     <form class="" submit="onSubmit()">
         <div class="form-group">
             <label for="title" class="form-label">Job Title</label>
-            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newJob.title" #spy required>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newJob.title" #spy #title="ngModel" required>
+            <div class="alert alert-danger" [hidden]="title.valid || title.pristine">Job Title is required</div>
         </div>
         <div class="form-group">
             <label for="company" class="form-label">Company</label>
-            <input type="text" class="form-control" id="company" name="company" [(ngModel)]="newJob.company" required>
+            <input type="text" class="form-control" id="company" name="company" [(ngModel)]="newJob.company" #company="ngModel" required>
+            <div class="alert alert-danger" [hidden]="company.valid || company.pristine">Company is required</div>
+
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary">
